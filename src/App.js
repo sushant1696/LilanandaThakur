@@ -38,8 +38,9 @@ function App() {
               <Nav className="mr-auto">
                 <Nav.Link href="#Home"><Link to="/">Home</Link></Nav.Link>
                 <Nav.Link href="#About"><Link to="/About">About</Link></Nav.Link>
-                <Nav.Link href="#Contact"><Link to="/Contact">Contact</Link></Nav.Link>
                 <Nav.Link href="#Management"><Link to="/Management">Management</Link></Nav.Link>
+                <Nav.Link href="#Contact"><Link to="/Contact">Contact</Link></Nav.Link>
+                
               </Nav>
 
             </Navbar>
@@ -51,26 +52,23 @@ function App() {
               <Route path="/Contact">
                 <Contact />
               </Route>
+              <Route path="/Management">
+                <Management/>
+              </Route>
               <Route path="/">
                 <Home />
               </Route>
-              <Route path="/Management">
-                <Management />
-              </Route>
+              
               
             </Switch>
           </div>
-
-
         </Router>
         <br />
 
-        <br />
+       
 
       </>
-      {/* {<About/>}
-      {<Home/>}
-      {<Contact/>} */}
+     
     </div>
   );
 }
