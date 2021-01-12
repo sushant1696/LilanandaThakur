@@ -1,24 +1,113 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image'
+import Carousel from 'react-bootstrap/Carousel';
+import Barjhar from "./Barjhar";
 function Home() {
     return (
         <div style={{backgroundColor: "#7CFC00"}}>
-            <h1> Welcome To Home Page</h1>
-            <div><img src="im0.jpg" width="50%" hight="50%" alt=""></img></div> 
-           
-            <div>   <p>
-                    Baba Sri had another dream too, that of a big modern hospital adjacent to Lila Dham. The dream
-                    that could help people seek cure of their  bodily ailments at the hospital besides peace of
-                    mind at the temple. He initiated work on the project in 1978 itself, which however, came to a
-                    sudden halt when he attained Mahasamadhi in July 1980. His disciples, followers and admirers
-                    were stunned by the event; yet they did not lose heart and with unflinching faith in Baba
-                    Sri’s powers, they went ahead with the unfinished work on his twin dreams-first, completion
-                    of the marble temple till 1977 and, thereafter commencement of fresh work on the hospital
-                    project.He did not believe in preaching; so he never reached any sermons. He believes in
-                    practice and he practice Hari Naam and Anna Daan throughout his life time for fulfilling
-                    the goal of Jana Seva. His hospital project is a manifestation of that philosophy of public
-                    service.</p></div>
+            <div>
+                {/* <img src="im0.jpg" width="30%" hight="50%" alt=""></img> */}
+                <Carousel >
+                
+                <Carousel.Item>
+                    <img
+                        src="gm1.jpg" 
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Birendra Nagar Ashram </h3>
+                        
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        src="im0.jpg" width="50%" hight="50%"
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Birendra Nagar Ashram </h3>
+                        
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        src="im7.jpg"  width="100%" hight="50%"
+                        alt="second slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Shiva Mandir</h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        src="im5.jpg"
+                        alt="third slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Barjhar Hospital</h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item>
+                
+                 <Carousel.Item>
+                    <img
+                        src="School.jpg"
+                        alt="fifth slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>L.N.B.H School </h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item> 
+                <Carousel.Item>
+                    <img
+                        src="pokhuri1.jpg"
+                        alt="sixth slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}></h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item> 
+                 <Carousel.Item>
+                    <img
+                        src="shivbarigate.jpg"
+                        alt="seventh slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Shiv Bari Gate</h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item>
+              
+                <Carousel.Item>
+                    <img
+                        src="line murti.jpg" width="50%" hight="50%"
+                        alt="fourth slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 style ={{backgroundColor: "green"}}>Statue in front of Birendra Nagar Ashram</h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item> 
+                <Carousel.Item>
+                    <img
+                        src="line2.jpg" width="50%" hight="50%"
+                        alt="fourth slide"
+                    />
+                    <Carousel.Caption>
+                        <h3 >Statue in front of Birendra Nagar Ashram</h3>
+                       
+                    </Carousel.Caption>
+                </Carousel.Item> 
+                
+            </Carousel>
+            <div style={{backgroundColor: "white"}}><Barjhar/></div>
+            
+                </div> 
+                
         </div>
+        
     )
 }
 export default Home;

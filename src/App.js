@@ -4,10 +4,13 @@ import Home from './Home';
 import Management from './Management';
 import Contact from "./Contact";
 import Gallery from "./Gallery"
-import Abc from "./Abc";
 import Footer from "./Footer";
+import Header from "./Header";
+import Barjhar from "./Barjhar";
+import PagolBaba from "./PagolBaba";
+import Sushanta from "./Sushanta";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,14 +18,12 @@ import {
   Link
 } from "react-router-dom";
 
-
-
 function App() {
   return (
     <div className="App">
-     
+
       <>
-      
+        <Header />
         <Router>
           <div>
 
@@ -34,15 +35,20 @@ function App() {
                 <Nav.Link href="#Management"><Link to="/Management">Management</Link></Nav.Link>
                 <Nav.Link href="#Contact"><Link to="/Contact">Contact</Link></Nav.Link>
                 <Nav.Link href="#Gallery"><Link to="/Gallery">Gallery</Link></Nav.Link>
-                <Nav.Link href="#Abc"><Link to="/Abc">Abc</Link></Nav.Link>
-                </Nav>
-
+                <NavDropdown title="AboutBarjhar" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">Barjhar</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">PagolBaba</NavDropdown.Item>
+                  {/* <NavDropdown.Item href="#action/3.2">PagolBaba</NavDropdown.Item> */}
+                  {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
+                </NavDropdown>
+              </Nav>
+             <Sushanta/>
             </Navbar>
+            
             <Switch>
-            <Route path="/Abc" key="acc">
-                <Abc />
-              </Route>
-            <Route path="/Gallery" key="gg">
+              <Route path="/Gallery" key="gg">
                 <Gallery />
               </Route>
               <Route path="/about" key="aa">
@@ -59,14 +65,15 @@ function App() {
               </Route>
 
               
-              </Switch>
+              <PagolBaba/>
+            </Switch>
           </div>
         </Router>
-        
+
         <br />
 
       </>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
