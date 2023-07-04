@@ -1,14 +1,16 @@
 import './App.css';
+import React, { Components } from 'react';
 import About from './About';
 import Home from './Home';
 import Management from './Management';
-import Contact from "./Contact";
+import GetData from "./GetData";
 import Gallery from "./Gallery"
 import Footer from "./Footer";
 import Header from "./Header";
 import Barjhar from "./Barjhar";
 import PagolBaba from "./PagolBaba";
-import Sushanta from "./Sushanta";
+import PostMethod from "./PostMethod";
+import MultipleFuctionCall from './MultipleFuctionCall';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import {
@@ -33,8 +35,10 @@ function App() {
                 <Nav.Link href="#Home"><Link to="/">Home</Link></Nav.Link>
                 <Nav.Link href="#About"><Link to="/About">About</Link></Nav.Link>
                 <Nav.Link href="#Management"><Link to="/Management">Management</Link></Nav.Link>
-                <Nav.Link href="#Contact"><Link to="/Contact">Contact</Link></Nav.Link>
                 <Nav.Link href="#Gallery"><Link to="/Gallery">Gallery</Link></Nav.Link>
+                <Nav.Link href="#GetData"><Link to="/GetData">GetData</Link></Nav.Link>
+                 <Nav.Link href="#PostMethod"><Link to="/PostMethod">PostMethod</Link></Nav.Link> 
+                 <Nav.Link href="#MultipleFuctionCall"><Link to="/MultipleFuctionCall">MultipleFuctionCall</Link></Nav.Link> 
                 <NavDropdown title="AboutBarjhar" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Barjhar</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.1">PagolBaba</NavDropdown.Item>
@@ -44,18 +48,24 @@ function App() {
                   <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                 </NavDropdown>
               </Nav>
-             <Sushanta/>
+             
             </Navbar>
             
             <Switch>
+            <Route path="/PostMethod" key="gg">
+                <PostMethod/>
+              </Route>
               <Route path="/Gallery" key="gg">
                 <Gallery />
               </Route>
               <Route path="/about" key="aa">
                 <About />
               </Route>
-              <Route path="/Contact" key="cc">
-                <Contact />
+              <Route path="/GetData" key="cc">
+                <GetData />
+              </Route>
+              <Route path="/MultipleFuctionCall" key="cc">
+                <MultipleFuctionCall />
               </Route>
               <Route path="/Management" key="mm">
                 <Management />
@@ -63,8 +73,6 @@ function App() {
               <Route path="/" key="hh">
                 <Home />
               </Route>
-
-              
               <PagolBaba/>
             </Switch>
           </div>
