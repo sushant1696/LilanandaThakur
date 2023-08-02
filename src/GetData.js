@@ -1,11 +1,13 @@
 import React from 'react';
-
+import {useDispatch} from 'react-redux'
+import {counter} from './MyComponents/counter'
 class GetData extends React.Component {
    
     // Constructor 
+    
     constructor(props) {
         super(props);
-   
+        const dispatch=useDispatch();
         this.state = {
             items: [],
             DataisLoaded: false
@@ -34,7 +36,7 @@ class GetData extends React.Component {
   
         return (
         
-        <div className='container'>
+        <div className='page-container'>
         <h2>Data Display</h2>
         <table>
           <thead>
@@ -55,6 +57,12 @@ class GetData extends React.Component {
             ))}
           </tbody>
         </table>
+// button
+<div>
+  <button onClick={(e)=>dispatch({type:'Increment'})}></button>
+  <counter/>
+  <button onClick={(e)=>dispatch({type:'Decrement'})}></button>
+</div>
       </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { useHistory } from 'react-router-dom';
 class PostMethod extends React.Component {
   constructor(props) {
     super(props);
@@ -7,6 +8,7 @@ class PostMethod extends React.Component {
     this.state = {
         responseData: [],
         isLoginSuccessful: false,
+      
       formData: {
         name: '',
         job: '',
@@ -18,6 +20,7 @@ class PostMethod extends React.Component {
     // If login is successful, set isLoginSuccessful to true
     this.setState({ isLoginSuccessful: true });
   };
+  
   handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -49,7 +52,7 @@ class PostMethod extends React.Component {
         console.log('POST request successful');
         const data = await response.json();
         this.setState({ responseData: data, error: null });
-        
+       
       } else {
         // Handle error response
         console.error('POST request failed');
@@ -59,12 +62,12 @@ class PostMethod extends React.Component {
     }
 
   };
-
+   
   render() {
     const { formData } = this.state;
     const { isLoginSuccessful } = this.state;
     return (
-        <div className="container">
+        <div className="page-container">
           <h5>Data</h5>
           {isLoginSuccessful && <p>Success! You are logged in.</p>}
       <form onSubmit={this.handleSubmit}>
@@ -83,6 +86,7 @@ class PostMethod extends React.Component {
 
         <button type="submit">Submit</button>
       </form>
+     
       </div>
     );
   }

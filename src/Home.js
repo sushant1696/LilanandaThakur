@@ -3,7 +3,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Barjhar from "./Barjhar";
 function Home() {
     return (
-        <div style={{backgroundColor: "#7CFC00"}}>
+        <div className='page-container' >
+            {/* <div style={{backgroundColor: "#7CFC00"}} ></div> */}
             <div>
                 {/* <img src="im0.jpg" width="30%" hight="50%" alt=""></img> */}
                 <Carousel >
